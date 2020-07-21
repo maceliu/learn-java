@@ -11,7 +11,7 @@ public class IndexController {
 	@GetMapping("/")
 	public ModelAndView index(HttpSession session) {
 		User user = (User) session.getAttribute("user");
-		return new ModelAndView("index.html", "user", user);
+		return new ModelAndView("/index.html", "user", user);
 	}
 
 	@GetMapping("/hello")
